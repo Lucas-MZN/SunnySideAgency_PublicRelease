@@ -1,0 +1,150 @@
+.main--menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  background-color: hsl(var(--primary-clr-200));
+}
+
+.toggle--menu {
+  position: relative;
+  z-index: 10001;
+  padding: 1.1rem 0;
+  border: 0;
+  width: 3rem;
+  height: 2.5rem;
+  background-color: hsl(var(--neutral-clr-100));
+  background-clip: content-box;
+  transition: all var(--transition-350);
+  cursor: pointer;
+}
+
+.toggle--menu::before,
+.toggle--menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0.3rem;
+  background-color: hsl(var(--neutral-clr-100));
+  transition: all var(--transition-350);
+  transform-origin: right center;
+}
+
+.toggle--menu::before {
+  top: 0;
+}
+
+.toggle--menu::after {
+  bottom: 0;
+}
+
+.toggle--menu[aria-expanded=true] {
+  background-color: hsl(var(--primary-clr-200));
+}
+
+.toggle--menu[aria-expanded=true]::before {
+  transform: rotate(-42.5deg);
+  width: 3.2rem;
+}
+
+.toggle--menu[aria-expanded=true]::after {
+  transform: rotate(42.5deg);
+  width: 3.2rem;
+}
+
+.menu {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--neutral-clr-100));
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-350);
+  font-family: var(--font-barlow);
+  font-weight: 700;
+  color: hsl(var(--neutral-clr-190));
+}
+.menu * {
+  list-style-type: none;
+}
+.menu ::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -2.8rem;
+  border-style: solid;
+  border-color: transparent transparent hsl(var(--neutral-clr-100)) transparent;
+  border-width: 0 0 3rem 3rem;
+}
+
+.menu:not([hidden]) {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.menu--item {
+  padding: 1rem 0;
+}
+
+.menu--item a {
+  display: block;
+  padding: 2rem 1.8rem;
+  text-decoration: none;
+  transition: all var(--transition-350);
+}
+
+.menu--item :hover,
+.menu--item :focus {
+  background-color: hsl(var(--primary-clr-100));
+  color: hsl(var(--neutral-clr-800));
+  font-family: var(--font-fraunces);
+  text-transform: uppercase;
+  border-radius: 10vw;
+}
+
+@media (min-width: 481px) {
+  .toggle--menu {
+    display: none;
+  }
+
+  .main--menu {
+    padding: 0.5rem 2.5rem;
+  }
+
+  .menu {
+    opacity: 1;
+    position: relative;
+    inset: auto;
+    background-color: hsl(var(--primary-clr-200));
+    flex-direction: row;
+    justify-content: flex-end;
+    pointer-events: all;
+  }
+  .menu ::after {
+    display: none;
+  }
+
+  .menu--item {
+    transition: all var(--transition-350);
+  }
+  .menu--item a {
+    color: hsl(var(--neutral-clr-100));
+    margin: 0 1ch;
+  }
+
+  .menu--item :hover,
+.menu--item :focus {
+    background-color: hsl(var(--neutral-clr-100));
+    color: hsl(var(--neutral-clr-800));
+  }
+}
