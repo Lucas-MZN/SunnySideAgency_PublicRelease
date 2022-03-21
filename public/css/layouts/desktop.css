@@ -1,0 +1,74 @@
+@media (min-width: 900px) {
+  .hero {
+    background-image: url(../assets/images/desktop/image-header.jpg);
+    padding-bottom: 5rem;
+    min-height: 90vh;
+  }
+
+  .hero--titre {
+    padding: 15vh 0;
+    width: max-content;
+  }
+
+  .hero--arrow {
+    margin: 0 auto;
+    height: 20vh;
+  }
+
+  .argu--grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .article2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .image2 {
+    grid-column: 2;
+  }
+
+  .bas1 {
+    background-image: url(../assets/images/desktop/image-graphic-design.jpg);
+  }
+
+  .bas2 {
+    background-image: url(../assets/images/desktop/image-photography.jpg);
+    background-color: hsl(var(--primary-clr-200));
+  }
+
+  .bas--wrapper {
+    margin: 70% auto 10%;
+    padding: 0;
+  }
+
+  .testimonial--container {
+    display: flex;
+    position: relative;
+    padding: 12rem 12.5rem;
+  }
+
+  .testimonial--title {
+    position: absolute;
+    inset: 6rem 25% 0 25%;
+  }
+
+  .foot--images--container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .foot--images--container .foot--image {
+    height: 100%;
+    aspect-ratio: 1/1.15;
+  }
+
+  .footer--nav--social {
+    margin: 3rem auto;
+  }
+
+  .attribution a,
+.attribution p {
+    font-size: 1.3ch;
+  }
+}

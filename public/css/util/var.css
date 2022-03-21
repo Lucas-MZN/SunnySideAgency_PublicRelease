@@ -1,0 +1,43 @@
+:root {
+  --primary-clr-100: 51, 100%, 49%;
+  --primary-clr-200: 200, 99%, 62%;
+  --primary-clr-210: 168, 34%, 24%;
+  --primary-clr-240: 167, 40%, 70%;
+  --primary-clr-250: 167, 40%, 24%;
+  --primary-clr-270: 198, 62%, 26%;
+  --primary-clr-300: 7, 99%, 70%;
+  --neutral-clr-100: 0, 0%, 100%;
+  --neutral-clr-150: 232, 10%, 55%;
+  --neutral-clr-170: 213, 9%, 16%;
+  --neutral-clr-190: 210, 4%, 67%;
+  --neutral-clr-200: 212, 27%, 19%;
+  --neutral-clr-800: 198, 100%, 2%;
+  --font-barlow: "Barlow", sans-serif;
+  --font-fraunces: "Fraunces", serif;
+  font-size: 62.5%;
+  --transition-350: 0.35s ease-in-out;
+}
+:root h1 {
+  font-family: var(--font-fraunces);
+  font-size: clamp(4.5rem, 4rem + 2vw, 25rem);
+  text-align: center;
+  color: hsl(var(--neutral-clr-100));
+}
+:root h2 {
+  font-family: var(--font-fraunces);
+  font-size: clamp(3rem, 3rem + 2vw, 10rem);
+}
+:root h3 {
+  font-family: var(--font-barlow);
+  font-size: clamp(3rem, 3.5rem + 2vw, 5rem);
+}
+:root h4 {
+  font-family: var(--font-barlow);
+  font-size: clamp(1.2rem, 2rem + 2vw, 3rem);
+}
+:root h5,
+:root p,
+:root article {
+  font-family: var(--font-fraunces);
+  font-size: clamp(0.5rem, 0.5rem + 2vw, 2.8rem);
+}
